@@ -14,8 +14,25 @@ def busca_elenco_detalhes(movie_id):
   return response.json()
 
 # Lista de Filmes (ID)
-Lista_filmes = [550, 551, 552]
+lista_filmes = [550, 551, 552]
 
+participacao_atores = defaultdict(int)
+frequencia_generos = defaultdict(int)
+bilheteria_atores = defaultdict(float)
+
+# Percorre cada filme da lista
+for movie_id in lista_filmes:
+  detalhes = buscas_detalhes_filmes(movie_id)
+  elenco = busca_elenco_detalhes(movie_id)
+
+for ator in elenco ['cast']:
+  participacao_atores[ator['name']] += 1
+
+for genero in detalhes['genres']:
+  frequencia_generos[genero['name']] += 1
+
+for ator in elenco['cast']:
+  bilheteria_atores[ator['name']] += detalhes['revenue']
 
 
 
