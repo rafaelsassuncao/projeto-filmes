@@ -60,7 +60,6 @@ for genero, frequencia in frequencia_generos.items():
     print(f"{genero}: {frequencia} filmes")
 
 print("\nTop 5 Atores com Maior Bilheteria:")
-# Ordena os atores por bilheteria (do maior para o menor)
 top_5_atores = sorted(bilheteria_atores.items(), key=lambda x: x[1], reverse=True)[:5]
 for ator, bilheteria in top_5_atores:
     print(f"{ator}: ${bilheteria:,.2f}")
