@@ -2,19 +2,21 @@
 
 Este repositório contém dois scripts Python que utilizam a API do TMDb para analisar dados de filmes e recomendar filmes similares. Foi desenvolvido como parte de um teste técnico para a vaga de Backend.
 
-### Pré-requisitos
+  ### Pré-requisitos
 
-Antes de executar os scripts, você precisa ter:
+    Antes de executar os scripts, você precisa ter:
 
-- `Python 3.x` instalado na sua máquina.
-- A biblioteca ``requests`` instalada. Ela é usada para fazer as requisições à API do TMDb.
+    - Python 3.6 ou superior instalado na sua máquina.
+    - A biblioteca requests instalada. Ela é usada para fazer as requisições à API do TMDb.
 
 <br>
 <br>
 
-# Como Executar os Scripts
-### 1. Análise de Dados de Filmes (`teste_1.py`)
-Este script analisa a participação de atores, a frequência de gêneros e a bilheteria dos filmes com base em uma lista de IDs fornecida pelo usuário.
+    # Como Executar os Scripts
+
+    1. Análise de Dados de Filmes (`teste_1.py`)
+
+    Este script analisa a participação de atores, a frequência de gêneros e a bilheteria dos filmes com base em uma lista de IDs fornecida pelo usuário.
 
 ### Passos para Executar:
 1. Abra o terminal na pasta onde o arquivo `teste_1.py` está localizado.
@@ -34,8 +36,9 @@ Este script analisa a participação de atores, a frequência de gêneros e a bi
 <br>
 <br>
 
-### 2. Recomendação de Filmes (`teste_2.py`)
-Este script recomenda filmes similares com base no ID de um filme fornecido pelo usuário.
+    2. Recomendação de Filmes (`teste_2.py`)
+
+    Este script recomenda filmes similares com base no ID de um filme fornecido pelo usuário.
 
 ### Passos para Executar:
   1. Abra o terminal na pasta onde o arquivo `teste_2.py` está localizado.
@@ -55,6 +58,6 @@ Este script recomenda filmes similares com base no ID de um filme fornecido pelo
 `IDs de Filmes`: Você pode encontrar IDs de filmes no site do TMDb. Basta pesquisar um filme e ver o número na URL.
 
 
-## Agradecimentos
+    Agradecimentos
 
-Este projeto foi desenvolvido como parte de um teste técnico. Agradeço a oportunidade de participar do processo seletivo!
+    Este projeto foi desenvolvido como parte de um teste técnico. Agradeço a oportunidade de participar do processo seletivo!
