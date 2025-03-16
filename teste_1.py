@@ -15,13 +15,14 @@ def buscar_elenco_filme(movie_id):
     resposta = requests.get(url)
     return resposta.json()
 
-# Lista de IDs dos filmes que queremos analisar
-lista_filmes = [550, 551, 552]
+# Solicita ao usuário que digite os IDs dos filmes separados por vírgula
+entrada = input("Digite os IDs dos filmes separados por vírgula (ex: 550, 155, 27205): ")
+lista_filmes = [int(id) for id in entrada.split(",")]
 
 # Dicionários para armazenar os dados
 participacao_atores = {}  
-frequencia_generos = {}  
-bilheteria_atores = {}  
+frequencia_generos = {}   
+bilheteria_atores = {} 
 
 # Percorre cada filme da lista
 for movie_id in lista_filmes:
@@ -48,8 +49,9 @@ for movie_id in lista_filmes:
             else:
                 frequencia_generos[nome_genero] = 1
 
-# Exibe os resultados
-print("Participação dos Atores:")
+# Exibe os resultados no console
+print("\nRelatório de Análise de Filmes:")
+print("\nParticipação dos Atores:")
 for ator, participacao in participacao_atores.items():
     print(f"{ator}: {participacao} filmes")
 
@@ -57,7 +59,6 @@ print("\nFrequência dos Gêneros:")
 for genero, frequencia in frequencia_generos.items():
     print(f"{genero}: {frequencia} filmes")
 
-# Top 5 Atores com Maior Bilheteria
 print("\nTop 5 Atores com Maior Bilheteria:")
 # Ordena os atores por bilheteria (do maior para o menor)
 top_5_atores = sorted(bilheteria_atores.items(), key=lambda x: x[1], reverse=True)[:5]
